@@ -14,6 +14,9 @@ font-family: 'Habibi', serif;
 font-family: 'Roboto', sans-serif;
 */
 
+
+
+
 /*header*/
 
 header {
@@ -27,11 +30,7 @@ padding: 1.5rem;
     justify-content: space-around;
 }
 
-a {
-    text-decoration: none;
-    font-size: 15px;
-    padding: 0.5rem;
-}
+
 
 nav{
     width: 80%;
@@ -47,10 +46,16 @@ nav{
 .navBar li a {
     color: black;
     font-size: 25px;
+    text-decoration: none;
+}
+
+.navBar li a:hover{
+    color:red;
+    font-size: 24px;
 }
 
 .logo   {
-    width: 25px;
+    width: 30px;
 }
 
 
@@ -90,7 +95,7 @@ nav{
     justify-content: center;
     align-items: center;
     background-color: #FF7B5E;
-    height: 600px;
+    height: 300px;
     padding: 60px;
 }
 
@@ -133,6 +138,8 @@ padding: 20px;
     width: 100%;
     padding: 20px;
     border: 10px solid;
+    object-fit: none
+    
 }
 
 
@@ -146,14 +153,9 @@ h2 {
     font-size: 30px;
 }
 
-.imagenes {
-    width: 500px;
-}
 
-.imagen {
-    display: flex;
-    justify-content: center;
-}
+
+
 
 /*Archivo*/
 
@@ -161,8 +163,39 @@ h2 {
     background-color: #FF7B5E;
     font-family: habibi, sans-serif;
     font-size: 42px;
-    justify-content: center;
-    padding: 20px;
+    width: 100%;
+}
+
+.grid {
+    display: grid;
+    width: 100%;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    gap: 20px;
+    grid-template-areas: 
+    "item1 item1 item2"
+    "item3 item3 item4"
+    "item5 item5 item6"
+    ;
+}
+
+.grid-1{
+    grid-area: item1;
+}
+.grid-2{
+    grid-area: item2;
+}
+.grid-3{
+    grid-area: item3;
+}
+.grid-4{
+    grid-area: item4;
+}
+.grid-5{
+    grid-area: item5;
+}
+.grid-6{
+    grid-area:item6;
 }
 
 
@@ -221,3 +254,16 @@ background-color: #FF7B5E;
     margin-bottom: auto;
 }
 
+@media (max-width:768px){
+    .navBar li a {font-size: 15px;}
+    .sectionPrincipal{height: 200px;}
+    .contenidoPrincipal h1 {font-size: 30px;}
+.containerArchivo {font-size: 15px; height: 50px;} 
+
+}
+
+
+
+@media (max-width:320){
+    .navBar li a {font-size: 5px;}
+}
